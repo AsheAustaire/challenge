@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/arrow.css">
+  <link rel="stylesheet" href="./src/css/stage.css">
+</head>
+
+<body>
+
+  <main class="page_wrapper">
+
+<!-- STAGE -->
+    <div class="stage"> 
+      <div class="background background_mountain background_active"></div>
+      <div class="background background_meadow"></div>
+      <div class="background background_desert "></div>
+      <div class="background background_ocean "></div>
+      <div class="background background_snow"></div>
+      <section class="overlay">  
+        <!-- <h4>What's up?</h4> -->
+        <div class="text-container">
+          
+<!-- DYNAMIC STAGES -->
+          <article class="text text_mountain ">
+            <h1 class="text-container_h1">In the wild</h1>
+            <h2 class="text-container_h2">There is no healthcare</h2>
+            <h3 class="text-container_h3">
+              Healthcare is "Oh, I broke my leg!" A lion comes and eats you. You're dead. Well, I'm not dead. I'm the lion. You're dead.
+            </h3>
+          </article>
+          <article class="text text_meadow text_transparent">
+            <h1 class="text-container_h1">How would I describe myself?</h1>
+            <h2 class="text-container_h2">Three words: </h2>
+            <h3 class="text-container_h3">
+              Hard working... Alpha male... Jackhammer... Merciless... Insatiable… Before I do anything, I ask myself... "Would an idiot do that?" And if the answer is yes, I do not do that thing.
+            </h3>
+          </article>
+          <article class="text text_desert text_transparent">
+            <h1 class="text-container_h1">I am faster than </h1>
+            <h2 class="text-container_h2">80% of all snakes.</h2>
+            <h3 class="text-container_h3">
+              Question: You know what's better than a triceratops? Only every other dinosaur that has ever existed.
+            </h3>
+          </article>
+          <article class="text text_ocean text_transparent">
+            <h1 class="text-container_h1">Dolphins aren't smart. </h1>
+            <h2 class="text-container_h2">They just like pushing things.</h2>
+            <h3 class="text-container_h3"> 
+              Dolphins get a lot of good publicity for the drowning swimmers they push back to shore, but what you don't hear about is the many people they push farther out to sea. 
+            </h3>
+          </article>
+          <article class="text text_snow text_transparent">
+            <h1 class="text-container_h1">When I die. </h1>
+            <h2 class="text-container_h2">I want to be frozen. </h2>
+            <h3 class="text-container_h3"> 
+              I will wake up stronger than ever, because I will have used that time, to figure out exactly why I died. And what moves I could have used to defend myself better.
+            </h3>
+        </article>
+      </section>
+    </div>
+
+<!-- ARROWS -->
+        <section class="arrow_wrapper">
+          <div id="arrow_prev" class="arrow prev"></div>  
+          <div id="arrow_next" class="arrow next"></div>
+        </section>
+
+    </div>
+  </main>
+  
+  <!-- Load JQuery -->
+  <script 
+    src="https://code.jquery.com/jquery-3.3.1.min.js" 
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+  <!-- Load Debounce -->
+  <script src="./src/js/debounce.js"></script>
+  <!-- Load Parallax -->
+  <script src="./lib/js/parallax.js"></script>
+  <!-- Load JS -->
+  <script src="./lib/js/index.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,71 @@
+body {
+  background: #292929;
+}
+
+.arrow_wrapper {
+  position: fixed;
+  right: calc(10px);
+  top: calc(50vh + 275px / 2);
+}
+
+.arrow {
+  cursor: pointer;
+  width: 46px;
+  height: 46px;
+  box-sizing: border-box;
+  background-color: hsl(360, 10%, 90%);
+  border-radius: 23px;
+  margin: 10px;
+}
+
+.arrow.next {
+  transform: translate3d(0px, 0px, 0px) rotateX(180deg);
+}
+.arrow.prev {
+  transform: translate3d(0px, 0px, 0px);
+}
+.arrow::before, .arrow::after {
+  content: '';
+  position: absolute;
+  transform-style: flat;
+  backface-visibility: hidden;
+  width: 15px;
+  height: 1px;
+  background-color: hsl(0,0%,0%);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.arrow::before {
+  transform: translate3d(10px, 20px, 0px) rotate(-45deg);
+}
+.arrow::after {
+  transform: translate3d(20px, 20px, 0px) rotate(45deg);
+}
+
+.spinArrow:before {
+  animation-name: spinBeforeArrow;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.spinArrow:after {
+  animation-name: spinAfterArrow;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spinAfterArrow {
+    from {transform: translate3d(10px, 20px, 0px) rotate(-45deg);}
+    to {transform: translate3d(10px, 20px, 0px) rotate(-405deg);}
+}
+@keyframes spinBeforeArrow {
+    from {transform: translate3d(20px, 20px, 0px) rotate(45deg);}
+    to {transform: translate3d(20px, 20px, 0px) rotate(405deg);}
+}
+
+/* 
+.arrow:active::before {
+  transform: translate3d(8px, 20px, 0px) rotate(160deg);
+}
+.arrow:active::after {
+  transform: translate3d(21px, 20px, 0px) rotate(-160deg);
+} */

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900|Work+Sans:500');
+
+/* CONFIG: Background */
+
+.background_mountain {
+  background-image: url("../../res/img/mountain.jpg");
+}
+.background_meadow {
+  background-image: url("../../res/img/meadow.jpg");
+}
+.background_desert {
+  background-image: url("../../res/img/desert.jpg");
+}
+.background_ocean {
+  background-image: url("../../res/img/ocean.jpg");
+}
+.background_snow {
+  background-image: url("../../res/img/snow.jpg");
+}
+
+.stage {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background.background_active {
+  top: 0%;
+  left: 0%;
+}
+
+.background.background_last {
+  top: -100%;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 100%;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: top .5s ease-in-out;
+}
+
+.overlay {
+  width: 50vw;
+  height: 98vh;
+  position: absolute;
+  top: 1vh;
+  left: 1vh;
+  background: hsla(0, 0%, 0%, .8);
+}
+
+.text-container {
+  width: 30vw;
+  height: 40vh;
+  position: absolute;
+  bottom: 60px;
+  right: 20px;
+  padding: 5px;
+  color: hsla(100, 100%, 100%);
+}
+
+/* @MEDIA FOR TEXT PLACEMENT */
+@media only screen and (max-width: 600px) {
+
+  .text-container {
+    bottom: 150px;
+    right: 40px;
+  }
+
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+
+.text_transparent {
+  opacity: 0;
+}
+
+.text-container_h1, .text-container_h2 {
+  font-family: "Merriweather";
+}
+
+.text-container_h1 {
+  font-size: 2.5rem;
+}
+
+.text-container_h2 {
+  font-size: 1.75rem;
+  color: yellow;
+}
+
+.text-container_h3 {
+  width: 90%;
+  margin-top: 20px;
+  font-size: .8rem;
+  font-family: "Work Sans";
+}
+
+/* @MEDIA FOR TEXT SIZE */
+
+@media only screen and (max-width: 400px) {
+
+.text-container_h1 {
+  font-size: 1.75rem;
+}
+
+.text-container_h2 {
+  font-size: 1.25rem;
+}
+
+.text-container_h3 {
+  font-size: .5rem;
+}
+
+}
